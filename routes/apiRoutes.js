@@ -30,4 +30,5 @@ router.post('/notes', (req, res) => {
     res.json(newNote);
 });
 
+//exporting modules
 module.exports = router;
