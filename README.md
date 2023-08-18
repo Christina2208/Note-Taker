@@ -70,7 +70,7 @@ You may contact me by christinalf22@gmail.com
 
 ## Demo <a name="Demo"></a>
 
-
+![ScreenShot](https://github.com/Christina2208/Note-Taker/blob/main/images/Note-Taker-Demo.png)
 
 ## Deployed Site <a name="deployedsite"></a>
 
