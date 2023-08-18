@@ -1,17 +1,20 @@
-//importing modules
+// Importing modules
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
 const path = require('path');
 
-// path defined to the db.json file
+// Middleware to parse request body as JSON
+router.use(express.json());
+
+// Path defined to the db.json file
 const dbPath = path.join(__dirname, '..', 'db', 'db.json');
 
 function Notes() {
     return JSON.parse(fs.readFileSync(dbPath, 'utf8'));
 }
 
-// saves to the db.json file
+// Saves to the db.json file
 function noteSaving(notes) {
     fs.writeFileSync(dbPath, JSON.stringify(notes));
 }
@@ -30,5 +33,5 @@ router.post('/notes', (req, res) => {
     res.json(newNote);
 });
 
-//exporting modules
+// Exporting modules
 module.exports = router;
